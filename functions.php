@@ -14,7 +14,6 @@ function divi_child_enqueue_styles() {
         wp_get_theme()->get('Version')
     );
     
-    wp_enqueue_script( "custom-js", get_stylesheet_directory_uri() . "/scripts.js", array( "jquery" ), "", true );
 }
 add_action( 'wp_enqueue_scripts', 'divi_child_enqueue_styles' );
 

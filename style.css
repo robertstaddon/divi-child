@@ -4,6 +4,7 @@ Theme URI:      https://abundantdesigns.com
 Description:    Child theme of Divi
 Author:         Abundant Designs
 Template:       Divi
-Version:        0.4
+Version:        0.5
 */
 
+body { outline: none; }
