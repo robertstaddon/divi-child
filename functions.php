@@ -1,13 +1,17 @@
 <?php
 
 /**
- * Enqueue the theme stylesheets and custom JavaScript
+ * Enqueue the theme stylesheets
  */
 function divi_child_enqueue_styles() {
  
     $parent_style = 'divi-style';
  
-    wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css' );
+    wp_enqueue_style( $parent_style,
+        get_template_directory_uri() . '/style.css',
+        array(),
+        wp_get_theme()->parent()->get( 'Version' )
+    );
     wp_enqueue_style( 'child-style',
         get_stylesheet_directory_uri() . '/style.css',
         array( $parent_style ),
